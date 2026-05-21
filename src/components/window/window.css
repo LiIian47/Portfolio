@@ -1,0 +1,104 @@
+
+.windowControls {
+  display: flex;
+  gap: 8px;
+  cursor: default;
+  position: absolute;
+  z-index: 1;
+  left: 15px;
+  top: 15px;
+}
+
+.windowSideBarToggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.window {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  color: var(--window-text);
+}
+
+.windowBody {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.windowRight {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+  height: 100%;
+  border-radius: 0 15px 15px 0;
+}
+
+.windowSideBar{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 60px 15px 15px 15px;
+  min-width: 170px;
+  background-color: var(--window-bg);
+  border-radius: 15px 0 0 15px;
+  border-right: 1px solid var(--window-border);
+  overflow-y: auto;
+}
+
+.windowContent {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: var(--window-content-bg);
+  overflow-y: auto;
+  overflow-x: auto;
+}
+
+.windowSideBar + .windowRight .windowContent > * {
+  min-width: 500px;
+}
+
+.windowHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 100px;
+  background-color: var(--window-header-bg);
+  width: 100%;
+  height: 50px;
+  cursor: grab;
+  position: relative;
+  border-bottom: 1px solid var(--window-header-border);
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.windowTitle {
+  font-size: 1rem;
+  color: var(--window-title);
+  padding-right: 100px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dragging {
+  pointer-events: none;
+  user-select: none;
+}
+
+.isDragging .windowHeader {
+  cursor: grabbing !important;
+}
+
+.isMaximized .windowHeader {
+  cursor: default !important;
+}

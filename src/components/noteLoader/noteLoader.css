@@ -1,0 +1,39 @@
+
+.unselectedContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.unselectedText {
+    font-size: 18px;
+    color: var(--text-secondary);
+}
+
+.defaultContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.defaultPreviewImage {
+    max-width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.tisseoTrackerContainer {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    gap: 10px;
+}
+
+.tisseoTrackerPreviewImage {
+    height: 100%;
+    max-width: 30%;
+    object-fit: contain;
+}

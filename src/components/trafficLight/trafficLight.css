@@ -1,0 +1,68 @@
+.trafficLightContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.trafficLightContainer:hover .trafficLightLogo {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.trafficLight1,
+.trafficLight2,
+.trafficLight3 {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.trafficLight1 {
+  background-color: #ff605c;
+  border: 1px solid #DF4744;
+}
+
+.trafficLight2 {
+  background-color: #ffbd44;
+  border: 1px solid #DE9F34;
+}
+
+.trafficLight3 {
+  background-color: #00ca56;
+  border: 1px solid #27AA35;
+}
+
+.trafficLightLogo {
+  display: block;
+  width: 50%;
+  height: 50%;
+  opacity: 0;
+  transition:
+    transform 0.5s ease,
+    box-shadow 0.5s ease;
+  will-change: transform, box-shadow;
+  transform: translateY(-4px) scale(0.72);
+  transition:
+    opacity 220ms cubic-bezier(0.2, 0.9, 0.2, 1),
+    transform 260ms cubic-bezier(0.2, 0.9, 0.2, 1);
+  pointer-events: none;
+}
+
+.trafficLightContainer:hover .trafficLight2.maximized .trafficLightLogo,
+.trafficLightContainer:hover .trafficLight3.disabled .trafficLightLogo {
+  opacity: 0;
+}
+
+.maximized,
+.trafficLight3.disabled {
+  background-color: #747474;
+  border: 1px solid #696969;
+  cursor: default;
+}
+
+
+

@@ -1,0 +1,82 @@
+.sendMailLogo {
+  position: absolute;
+  left: 100px;
+  top: 13px;
+  height: 20px;
+  width: auto;
+  cursor: pointer;
+  color: var(--mail-text);
+}
+
+.sendMailLogo:hover {
+  color: var(--mail-text-dark);
+  width: auto;
+  height: 21px;
+}
+
+.mailContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  padding: 5px 20px;
+}
+
+.field {
+  display: flex;
+  flex-direction: row;
+}
+
+.fieldTitle {
+  display: flex;
+  align-items: center;
+  color: var(--mail-text);
+  font-size: 13px;
+  margin-right: 5px;
+}
+
+.fieldInput {
+  flex: 1;
+  font-size: 15px;
+  border: none;
+  background-color: transparent;
+  color: var(--mail-input-text);
+}
+
+.fieldInput:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px var(--mail-input-bg) inset;
+  box-shadow: 0 0 0px 1000px var(--mail-input-bg) inset;
+  -webkit-text-fill-color: var(--mail-input-text);
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.fieldInput:focus {
+  outline: none;
+}
+
+.textareaInput {
+  flex: 1;
+  box-sizing: border-box;
+  font-size: 15px;
+  border: none;
+  resize: vertical;
+  min-height: 120px;
+  resize: none;
+  background-color: transparent;
+  color: var(--mail-input-text);
+}
+
+.textareaInput:focus {
+  outline: none;
+}
+
+.horizontalBar {
+  height: 1px;
+  background-color: var(--mail-button-bg);
+  margin: 5px 0;
+}
+
+.lastField {
+  display: flex;
+  flex: 1;
+}

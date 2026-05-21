@@ -1,0 +1,25 @@
+.resumeContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+iframe {
+  border: none;
+  width: 100%;
+  height: 100%;
+}
+
+.iframeMouseFix {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background-color: transparent;
+  pointer-events: auto;
+}

@@ -1,0 +1,145 @@
+.dockContainer {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: 70px;
+  padding: 12.5px;
+  background: var(--dock-bg);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px var(--dock-shadow);
+  visibility: hidden;
+}
+
+.dockContainer.show {
+  visibility: visible;
+}
+
+.dockPinnedIcon {
+  display: flex;
+  gap: 12.5px;
+}
+
+.dockUnpinnedIcons {
+  display: flex;
+  gap: 12.5px;
+}
+
+.dockSpliter {
+  width: 1px;
+  height: 45px;
+  margin-left: 12.5px;
+  background: var(--dock-item-hover);
+}
+
+.dockIcon {
+  width: 45px;
+  height: 45px;
+  position: relative;
+}
+
+.dockIconImage {
+  width: 45px;
+  height: 45px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.dockIconName {
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  color: var(--dock-tooltip-text);
+  background: var(--dock-tooltip-bg);
+  padding: 6px 8px;
+  border-radius: 6px;
+  white-space: nowrap;
+  text-align: center;
+  z-index: 2;
+  visibility: hidden;
+  opacity: 0;
+  transition:
+    opacity 120ms ease,
+    transform 120ms ease;
+}
+
+.dockIcon:hover .dockIconName {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(-50%) translateY(-4px);
+}
+
+.dockIconSelect {
+  background-color: var(--dock-dot);
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -9px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+@media (max-width: 750px) {
+  .dockContainer {
+    bottom: 10px;
+    height: 55px;
+    padding: 8px;
+  }
+
+  .dockIcon {
+    width: 35px;
+    height: 35px;
+  }
+
+  .dockIconImage {
+    width: 35px;
+    height: 35px;
+  }
+
+  .dockPinnedIcon, .dockUnpinnedIcons {
+    gap: 8px;
+  }
+
+  .dockSpliter {
+    height: 30px;
+    margin-left: 8px;
+  }
+}
+
+@media (max-width: 500px) {
+  .dockContainer {
+    bottom: 8px;
+    height: 45px;
+    padding: 6px;
+  }
+
+  .dockIcon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .dockIconImage {
+    width: 30px;
+    height: 30px;
+  }
+
+  .dockPinnedIcon, .dockUnpinnedIcons {
+    gap: 6px;
+  }
+
+  .dockSpliter {
+    height: 25px;
+    margin-left: 6px;
+  }
+  
+}

@@ -1,0 +1,99 @@
+.noteContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 25px 25px 25px;
+  gap: 15px;
+}
+
+.noteDate {
+  text-align: center;
+  color: var(--note-text-light);
+}
+
+.noteTitle {
+  font-size: 28px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.noteImageContainer {
+  width: 100%;
+}
+
+.noteDescription {  
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.topicsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.topicChild {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--note-border);
+  border-radius: 5px;
+  padding: 5px;
+  gap: 5px;
+}
+
+.noteLinksContainer {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+}
+
+.noteLink {
+  font-size: 20px;
+  color: var(--note-link);
+  text-decoration: underline;
+  text-decoration-color: var(--note-link);    /* Couleur du trait */
+  text-decoration-thickness: 3px; /* Épaisseur du trait */
+  text-underline-offset: 3px;
+}
+
+
+
+.sideBarRepo {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 15px;
+  border-radius: 8px;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.sideBarRepoName {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.sideBarRepoInfo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  max-width: 200px;
+}
+
+.sideBarRepoDate {
+  white-space: nowrap;
+  letter-spacing: -1px;
+  color: var(--text-main);
+}
+
+.sideBarRepoDescription {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--note-text);
+}
+
+.sideBarRepo.active {
+  background-color: var(--note-hover);
+}

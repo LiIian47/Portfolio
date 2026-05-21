@@ -1,0 +1,144 @@
+:root {
+  /* Colors */
+  --text-main: #1a1a1a;
+  --text-secondary: #666;
+  --text-inverse: #ffffff;
+  
+  /* Menu bar */
+  --menu-text-color: rgba(255, 255, 255, 0.95);
+  --menu-bg: #e5e4e7ea;
+  --menu-text-dark: #1a1a1a;
+  --menu-overlay-bg: #fff;
+  --menu-overlay-shadow: rgba(0, 0, 0, 0.18);
+  --menu-item-hover: rgba(0, 0, 0, 0.05);
+
+  /* Dock */
+  --dock-bg: rgba(255, 255, 255, 0.1);
+  --dock-shadow: rgba(0, 0, 0, 0.2);
+  --dock-item-hover: rgba(255, 255, 255, 0.712);
+  --dock-tooltip-bg: rgba(0, 0, 0, 0.65);
+  --dock-tooltip-text: #fff;
+  --dock-dot: #000000;
+
+  /* Window */
+  --window-bg: #e5e4e7f8;
+  --window-content-bg: white;
+  --window-border: rgb(209, 204, 202);
+  --window-header-bg: rgb(236, 234, 234);
+  --window-header-border: rgb(231, 225, 225);
+  --window-title: #1a1a1a;
+  --window-text: #1a1a1a;
+
+  /* Finder */
+  --finder-text: #666;
+  --finder-border: #e0e0e0;
+  --finder-bg: #ffffff;
+  --finder-hover: #f5f7f9;
+  --finder-active: #edf2f7;
+  --finder-text-light: #999;
+  --finder-icon-bg: #cecece;
+  --finder-accent: #007AFF;
+
+  /* Mail */
+  --mail-text: rgb(145, 145, 145);
+  --mail-text-dark: rgb(120, 120, 120);
+  --mail-input-bg: white;
+  --mail-input-text: black;
+  --mail-button-bg: rgb(211, 211, 211);
+
+  /* Note */
+  --note-border: black;
+  --note-text: #666;
+  --note-hover: #d6d6d6;
+  --note-text-light: #999;
+  --note-link: #ffda33;
+  
+  /* Shortcuts */
+  --shortcut-bg: #f0f0f0;
+  --shortcut-text: #333;
+  --shortcut-text-light: #555;
+}
+
+body.dark {
+  /* Colors */
+  --text-main: #ffffff;
+  --text-secondary: #e5e5ea;
+  --text-inverse: #1a1a1a;
+
+  /* Menu bar */
+  --menu-text-color: rgba(255, 255, 255, 0.95);
+  --menu-bg: #1c1c1eea;
+  --menu-text-dark: #ffffff;
+  --menu-overlay-bg: #2c2c2e;
+  --menu-overlay-shadow: rgba(0, 0, 0, 0.5);
+  --menu-item-hover: rgba(255, 255, 255, 0.1);
+
+  /* Dock */
+  --dock-bg: rgba(0, 0, 0, 0.3);
+  --dock-shadow: rgba(0, 0, 0, 0.5);
+  --dock-item-hover: rgba(255, 255, 255, 0.3);
+  --dock-tooltip-bg: rgba(255, 255, 255, 0.85);
+  --dock-tooltip-text: #000;
+  --dock-dot: #ffffff;
+
+  /* Window */
+  --window-bg: #2c2c2ef8;
+  --window-content-bg: #1e1e1e;
+  --window-border: #3a3a3c;
+  --window-header-bg: #2c2c2e;
+  --window-header-border: #3a3a3c;
+  --window-title: #ffffff;
+  --window-text: #ffffff;
+
+  /* Finder */
+  --finder-text: #e5e5ea;
+  --finder-border: #3a3a3c;
+  --finder-bg: #1e1e1e;
+  --finder-hover: #2c2c2e;
+  --finder-active: #3a3a3c;
+  --finder-text-light: #98989d;
+  --finder-icon-bg: #48484a;
+  --finder-accent: #0a84ff;
+
+  /* Mail */
+  --mail-text: #98989d;
+  --mail-text-dark: #ffffff;
+  --mail-input-bg: #2c2c2e;
+  --mail-input-text: #ffffff;
+  --mail-button-bg: #48484a;
+
+  /* Notes */
+  --note-border: #ffffff;
+  --note-text: #e5e5ea;
+  --note-hover: #2c2c2e;
+  --note-text-light: #aeaeaf;
+  
+  /* Shortcuts */
+  --shortcut-bg: #2c2c2e;
+  --shortcut-text: #ffffff;
+  --shortcut-text-light: #98989d;
+}
+
+#root {
+    font-family: 'SF Mono', monospace;
+    color: var(--text-main);
+}
+
+* { 
+  box-sizing: border-box; 
+}
+
+body {
+  all: unset;
+  display: block;
+  color: var(--text-main);
+  background-color: transparent;
+}
+
+button, a {
+  all: unset;
+  color: inherit;
+  cursor: pointer;
+  font-family: inherit;
+}
+

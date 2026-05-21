@@ -1,0 +1,190 @@
+.menuBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 28px;
+  color: var(--menu-text-color);
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial;
+  font-size: 12px;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+}
+
+.menuBarRight{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-right: 10px;
+  color: var(--menu-text-color);
+}
+
+.menuBarLeft {
+  padding-left: 4px;
+  display: flex;
+  align-items: center;
+  color: var(--menu-text-color);
+}
+
+.menuIcon {
+  color: var(--menu-text-color);
+  opacity: 0.95;
+  transition:
+    transform 120ms ease,
+    color 120ms ease,
+    opacity 120ms ease;
+}
+
+.menuIcon:hover {
+  transform: translateY(-1px) scale(1.05);
+  opacity: 1;
+  color: var(--menu-text-color);
+}
+
+.apple {
+  margin-bottom: 3px;
+  color: var(--menu-text-color);
+}
+
+.profile {
+  font-weight: 600;
+}
+
+.menuCategory {
+  padding: 5px 12px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  height: 20px;
+  line-height: 20px;
+  cursor: pointer;
+}
+
+.open {
+  background: var(--menu-item-hover);
+}
+
+
+.timeDisplay {
+  border-radius: 6px;
+  color: var(--menu-text-color);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 20px;
+  height: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profileContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+}
+
+.profilePopup {
+  position: absolute;
+  left: 0;
+  top: 30px;
+  width: 88px;
+  height: 88px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--menu-overlay-bg);
+  display: block;
+  box-shadow: 0 10px 30px var(--menu-overlay-shadow);
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(6px) scale(0.98);
+  transition:
+    opacity 160ms ease,
+    transform 160ms ease,
+    visibility 160ms;
+  pointer-events: none;
+  object-fit: cover;
+}
+
+.profileContainer:hover .profilePopup {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+.menuItemContainer {
+  position: relative;
+  cursor: pointer;
+}
+
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 24px;
+  min-width: 220px;
+  background: var(--menu-bg); 
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  color: var(--menu-text-dark);
+  border-radius: 12px;
+  padding: 5px;
+  box-shadow: 0 10px 30px var(--menu-overlay-shadow), 0 0 0 0.5px rgba(0, 0, 0, 0.1);
+  border: 0.5px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  flex-direction: column;
+  visibility: hidden;
+  z-index: 2;
+}
+
+.overlay button {
+  background: transparent;
+  border: none;
+  text-align: left;
+  padding: 6px 10px;
+  margin: 1px 0;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.1s ease;
+}
+
+.overlay button:hover {
+  background-color: var(--menu-item-hover); 
+  transition: background-color 0.1s ease;
+}
+
+.overlayLogo {
+  width: 17px;
+  height: 17px;
+  margin-left: auto;
+}
+
+.show {
+  visibility: visible;
+}
+
+@media (max-width: 768px) {
+  .menuCategory {
+    padding: 5px 8px;
+  }
+}
+
+@media (max-width: 650px) {
+  .menuBarRight {
+    display: none;
+  }
+}
+
+@media (max-width: 550px) {
+  /* Masquer les menus moins essentiels sur très petit écran */
+  .menuItemContainer:nth-child(4), /* Editer */
+  .menuItemContainer:nth-child(5) { /* Affichage */
+    display: none;
+  }
+}
