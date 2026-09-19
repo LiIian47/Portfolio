@@ -7,6 +7,7 @@ import LinkedinLogo from "../assets/linkedinApp.svg";
 import FinderLogo from "../assets/finderApp.svg";
 import EpitechLogo from "../assets/epitechApp.svg";
 import LyceeLogo from "../assets/lyceeApp.svg";
+import SepteoLogo from "../assets/septeoApp.svg";
 
 import React, { createContext, useEffect, useState } from "react"
 
@@ -62,6 +63,7 @@ const initialWindows: WindowDescriptor[] = [
   { title: "Linkedin", logo: LinkedinLogo, url: "https://www.linkedin.com/in/lilian-davezac", pinned: true },
   { title: "Epitech Bachelor", logo: EpitechLogo, state: "close", pinned: false, default: { width: 625, height: 775 }},
   { title: "Lycée polyvalent Simone de Beauvoir", logo: LyceeLogo, state: "close", pinned: false, default: { width: 790, height: 600 }},
+  { title: "Septeo", logo: SepteoLogo, state: "close", pinned: false, default: { width: 500, height: 600 }},
   { title: "Shortcuts", displayTitle: "Raccourcis", logo: SettingLogo, state: "close", pinned: false, default: { width: 320, height: 500 }, resizable: false },
 ]
 

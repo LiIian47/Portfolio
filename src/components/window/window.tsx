@@ -7,7 +7,7 @@ import TrafficLight from "../trafficLight/trafficLight";
 import Shortcuts from "../../pages/shortcuts/shortcuts";
 import Resume from "../../pages/resume/resume";
 import Mail from "../../pages/mail/mail";
-import SchoolLoader from "../schoolLoader/schoolLoader";
+import FinderWindowLoader from "../finderWindowLoader/finderWindowLoader";
 import { Note, NoteSideBar } from "../../pages/note/note";
 import { Finder, FinderSideBar } from "../../pages/finder/finder";
 import Profile from "../../pages/profile/profile";
@@ -73,9 +73,11 @@ function Window({ title}: WindowProps) {
       case "Mail":
         return <Mail />;
       case "Epitech Bachelor":
-        return <SchoolLoader title="Epitech Bachelor" />;
+        return <FinderWindowLoader title="Epitech Bachelor" />;
       case "Lycée polyvalent Simone de Beauvoir":
-        return <SchoolLoader title="Lycée polyvalent Simone de Beauvoir" />;
+        return <FinderWindowLoader title="Lycée polyvalent Simone de Beauvoir" />;
+      case "Septeo":
+        return <FinderWindowLoader title="Septeo" />;
       case "Finder":
         return <Finder />;
       case "Note":

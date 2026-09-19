@@ -1,30 +1,30 @@
 
-.schoolLoaderContainer {
+.finderWindowLoaderContainer {
   display: flex;
   flex-direction: column;
 
 }
 
-.schoolLoaderImage {
+.finderWindowLoaderImage {
   width: 100%;
   height: auto;
   margin-bottom: 20px;
 }
 
-.schoolLoaderTextContainer {
+.finderWindowLoaderTextContainer {
   display: flex;
   flex-direction: column;
   gap: 10px;
   padding: 20px;
 }
 
-.schoolLoaderTitle {
+.finderWindowLoaderTitle {
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 10px;
 }
 
-.schoolLoaderContent {
+.finderWindowLoaderText {
   font-size: 16px;
   line-height: 1.5;
   white-space: pre-line;

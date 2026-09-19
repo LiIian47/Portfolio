@@ -36,6 +36,7 @@
 }
 
 .finderItem {
+  position: relative;
   background-color: var(--finder-bg);
   border-radius: 15px;
   font-size: 14px;
@@ -50,6 +51,19 @@
 .clickable:hover {
   background-color: var(--finder-active);
   cursor: pointer;
+}
+
+.finderItemChevron {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--finder-text-light);
+  transition: transform 0.2s;
+}
+
+.clickable:hover .finderItemChevron {
+  transform: translateY(-50%) translateX(3px);
 }
 
 .finderItemName {
@@ -70,6 +84,11 @@
 
 .finderItemDescription {
   color: var(--finder-text);
+}
+
+.finderItemDuration {
+  color: var(--finder-text);
+  font-weight: 400;
 }
 
 .finderSideBar {

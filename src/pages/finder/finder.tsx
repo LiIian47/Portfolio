@@ -2,13 +2,15 @@
 import "./finder.css";
 
 import { IoLanguage } from "react-icons/io5";
-import { LuLayers3, LuWrench, LuFile} from "react-icons/lu";
+import { LuLayers3, LuWrench, LuFile, LuBriefcase} from "react-icons/lu";
+import { LuDumbbell } from "react-icons/lu";
 import { PiGraduationCapBold , PiCodeBold} from "react-icons/pi";
-import { MdMovie, MdOutlineVideogameAsset } from "react-icons/md";
+import { MdMovie, MdOutlineVideogameAsset, MdChevronRight } from "react-icons/md";
 import { FaFlagCheckered } from "react-icons/fa";
 
 import FrenchLogo from "../../assets/france.png";
 import EnglishLogo from "../../assets/union-jack.png";
+import SepteoLogo from "../../assets/septeoLogo.svg";
 
 import { WindowContext } from "../../context/windowContext";
 import React, { useContext } from "react";
@@ -46,6 +48,16 @@ const FinderContent: FinderSection[] = [
     sideBarLogo: <PiGraduationCapBold size={25} color="007AFF"/>
   },
   {
+    name: "Expérience",
+    content: {
+      columnName: ["Entreprise", "Poste", "Durée"],
+      items: [
+        { name: "Septeo", description: "Stagiaire", duration: "Deux mois", logo: SepteoLogo, window: true },
+      ]
+    },
+    sideBarLogo: <LuBriefcase size={25} color="007AFF"/>
+  },
+  {
     name: "Langages de programmation",
     content: {
       columnName: ["Langages de programmation", "Niveaux de maîtrise"],
@@ -60,6 +72,8 @@ const FinderContent: FinderSection[] = [
         { name: "Rust", description: "Notions de base", icon: "devicon-rust-plain colored" },
         { name: "SQL", description: "Intermédiaire", icon: "devicon-mysql-plain colored" },
         { name: "MongoDB", description: "Notions de base", icon: "devicon-mongodb-plain colored" },
+        { name: "Java", description: "Intermédiaire", icon: "devicon-java-plain colored" },
+        { name: "DynamoDB", description: "Intermédiaire", icon: "devicon-dynamodb-plain colored" },
       ]
     },
     sideBarLogo: <PiCodeBold size={25} color="007AFF"/>
@@ -73,7 +87,6 @@ const FinderContent: FinderSection[] = [
         { name: "Node.js", description: "Backend (Intermédiaire)", icon: "devicon-nodejs-plain colored" },
         { name: "Prisma", description: "Backend (Intermédiaire)", icon: "devicon-prisma-plain colored" },
         { name: "Express", description: "API (Intermédiaire)", icon: "devicon-express-original colored" },
-        { name: "Material-UI", description: "UI (Intermédiaire)", icon: "devicon-materialui-plain colored" },
         { name: "Tailwind CSS", description: "UI (Notions de base)", icon: "devicon-tailwindcss-plain colored" },
       ]
     },
@@ -90,7 +103,8 @@ const FinderContent: FinderSection[] = [
         { name: "Linux", description: "Intermédiaire", icon: "devicon-linux-plain colored" },
         { name: "Visual Studio Code", description: "Avancé", icon: "devicon-vscode-plain colored" },
         { name: "Postman", description: "Intermédiaire", icon: "devicon-postman-plain colored" },
-        { name: "Figma", description: "Intermédiaire", icon: "devicon-figma-plain colored" },      
+        { name: "Figma", description: "Intermédiaire", icon: "devicon-figma-plain colored" },
+        { name: "AWS", description: "Intermédiaire", icon: "devicon-amazonwebservices-plain-wordmark colored" },
       ]
     },
     sideBarLogo: <LuWrench size={25} color="007AFF"/>
@@ -111,9 +125,10 @@ const FinderContent: FinderSection[] = [
     content: {
       columnName: ["Loisirs", "Description"],
       items: [
+        { name: "Sport", description: "Course à pied, Musculation", logo: <LuDumbbell size={16} /> },
         { name: "Cinéma", description: "Science-Fiction, Thriller, Biopic Historique (ex: Premier Contact, Dune, Oppenheimer ,Tenet)", logo: <MdMovie size={16} /> },
         { name: "Jeux Vidéo", description: "Valorant, Elden-Ring, Hollow-Knight, Le Man Ultimate", logo: <MdOutlineVideogameAsset size={16} /> },
-        { name: "Sport automobile", description: "GT World Challenge Europe, Formule1", logo: <FaFlagCheckered size={16} /> },
+        { name: "Sport automobile", description: "GT World Challenge Europe", logo: <FaFlagCheckered size={16} /> },
       ]
     },
     sideBarLogo: <LuFile size={25} color="007AFF"/>
@@ -181,6 +196,7 @@ function Finder() {
               {item.duration && (
                 <div className="finderItemDuration">{item.duration}</div>
               )}
+              {item.window && <MdChevronRight className="finderItemChevron" size={20} />}
             </div>
           ))}
         </div>
